@@ -1,8 +1,27 @@
-﻿@{
+﻿@model List<LinksTable>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Links</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Link</th>
+                <th>Create Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (LinksTable item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Link</td>
+                    <td>@item.CreationTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
