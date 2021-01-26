@@ -10,6 +10,8 @@ namespace Sekmen.ExpiredLink.Database.Entity
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        public string Guid { get; set; }
+
         public string Link { get; set; }
 
         public DateTime CreationTime { get; set; }
